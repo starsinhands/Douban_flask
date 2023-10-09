@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>登陆界面</title>
+    <link rel="icon" href="http://v3.bootcss.com/favicon.ico">
+    <style>
+
+ li {
+            list-style: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url(/static/assets/img/1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+
+        #maxbox {
+            margin: 0 auto;
+            margin-top: 200px;
+            padding: 20px, 50px;
+            background-color: #00000090;
+            text-align: center;
+            width: 600px;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        #maxbox h1 {
+            padding: 0;
+            padding-top: 60px;
+            color: white;
+            font-size: 30px;
+            padding-bottom: 4px;
+            border-bottom: solid 1px white;
+        }
+
+        #maxbox h2 {
+            font-weight: 700;
+            color:white;
+        }
+
+        #maxbox .inputbox {
+            margin-top: 30px;
+
+        }
+
+        #maxbox .inputText {
+            margin-top: 20px;
+
+        }
+
+        #maxbox .inputText span {
+            color: white;
+            font-size: 18px;
+
+
+        }
+
+        #maxbox .inputText input {
+            border: 0;
+            padding: 6px;
+            border-bottom: 1px solid white;
+            background-color: #FFFFFF00;
+            color: white;
+        }
+
+        #maxbox .inputbox .inputButton {
+            margin: 0;
+            border: 0;
+            margin-top: 20px;
+            width: 145px;
+            height: 25px;
+            border-radius: 25px;
+            color: white;
+            background-color: #3498db;
+        }
+
+        #sign_up {
+            margin-top: 50px;
+            color: white;
+            font-size: 17px;
+        }
+
+        #sign_up a {
+            color: #3498db;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="maxbox">
+        <h1>登陆界面</h1>
+        <h2>请登录</h2>
+        <div class="inputbox">
+<!--            <form name="frm" action="" method="post">-->
+            <form  action="/login" method="post">
+                <div class="inputText">
+                    <span class="iconfont icon-mine"></span>
+                    <input class="username" type="text" placeholder="用户名" name="username" style="color:while" />
+                </div>
+                <div class="inputText">
+                    <span class="iconfont icon-lock"></span>
+                    <input type="password" placeholder="密码" name="password" style="color:white" />
+                    <br>
+                    <input class="remember" name="remember" type="checkbox" value="" checked="checked">
+                    <span style="color:rgb(255, 255, 255);font-size:5px;">记住我</span>
+
+                </div>
+                <input class="inputButton" type="submit" value="登录"/>
+                    {{msg}}
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
